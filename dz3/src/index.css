@@ -1,0 +1,93 @@
+:root {
+    --bg: #f1f3ec;
+    --ink: #16241b;
+    --moss: #2f5d3f;
+    --moss-dark: #22442e;
+    --sun: #e8cd57;
+    --card: #fbfcf8;
+    --line: #d5dbc9;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Manrope", system-ui, sans-serif;
+}
+.page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 20px 64px;
+}
+.header {
+    margin-bottom: 36px;
+}
+.header h1 {
+    margin: 0 0 8px;
+    font-family: "Bitter", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.02em;
+}
+.header p {
+    margin: 0; color: #4a5b4f;
+}
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+.card {
+    height: 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background: var(--line);
+}
+.card__body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    justify-content: space-between;
+}
+.card__title {
+    margin: 0;
+    font-family: "Bitter", Georgia, serif;
+    font-size: 1.15rem;
+}
+.card__btn {
+    font: inherit;
+    font-weight: 600;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--moss);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+.card__btn:hover {
+    background: var(--moss-dark);
+}
+.card__btn:active {
+    transform: translateY(1px);
+}
+.card__btn:focus-visible {
+    outline: 3px solid var(--sun);
+    outline-offset: 2px;
+}
